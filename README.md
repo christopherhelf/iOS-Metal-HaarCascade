@@ -1,0 +1,9 @@
+# iOS-Metal-Haarcascade
+
+This is a small example I've put together to demonstrate object detection via Haar Classifiers on iOS using the Metal API. It's not really optimized - I'm using a single kernel at the moment for the detection, which should probably be split up into multiple stages in order to avoid that single GPU threads run for too long, especially those that pass the first few cascades. The project is heavily based on a [Cuda-based example](https://github.com/Hoops021/FaceDetectionGPU), so make sure to check that out as well. 
+
+I've converted the OpenCV HaarCascade File haarcascade_frontalface_default to JSON just because its easier to parse than XML, so theoretically other files should be supported as well. Currently, only one haar feature per classifier is supported, so if you try to convert other xml files and parse them, you'll receive an exception. 
+
+The example I've used is for face detection, hence the naming scheme in the project. I'm using triple buffering and a MTLView in which I then render. Rectangle grouping is currently done on the CPU, but it shouldnt be too hard to transfer that to the GPU as well. In that case, one could do the full detection and drawing process within a single MTLCommandBuffer instance. I've also tried to improve performance by copying the scaled Haar Classifiers to a MTLBuffer with a storageModePrivate flag, as debugging of the shader showed the biggest bottleneck being reading from that buffer, however, it only marginally improved the results. I'm also using step sizes larger than one to improve performance. 
+
+Even though tests showed correct detection of a single face, I provide no guarantees for general correct functionality. Feel free to use this in your own projects. 
