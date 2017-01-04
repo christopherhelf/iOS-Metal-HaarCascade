@@ -1,4 +1,4 @@
-# iOS-Metal-Haarcascade
+# iOS-Metal-Haarcascade - Updated
 
 This is a small example I've put together to demonstrate object detection via Haar Classifiers on iOS using the Metal API. This is the updated version, for the old version please check out the respective branch. I've tried to optimize a lot of steps since the last version.
 
