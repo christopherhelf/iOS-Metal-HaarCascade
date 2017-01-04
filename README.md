@@ -22,4 +22,8 @@ I've created a few wrapper classes for `MetalComputePipeline`, which basically s
 
 Note that I'm currently using the original method by Viola and Jones for grouping, i.e. overlapping rectangles are considered neighbors and are thus averaged for the final rectangle - which means that if two different faces are close together, the current version will probably no be able to differentiate due to overlapping regions. 
 
+Performance in Release mode is pretty stable at 30 FPS on an iPhone 7, with the current settings (720x1280 input, processing at half the initial resolution, minimum rectangle size 360, maximum rectangle size 720, scale factor 1.2). I've also written some pretty messy unit tests, but they do their job :)
+
+Some of the code is still a mess and a lot of parts are specifically written for the included json file (like how the number of stages are split, etc.), so beware when using this for other haarcascade classifier files.
+
 Even though tests showed correct detection of a single face/two faces, I provide no guarantees for general correct functionality. Feel free to use this in your own projects. 
