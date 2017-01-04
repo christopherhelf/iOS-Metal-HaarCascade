@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  testbed
+//  iOS-HaarCascade-Improved
 //
-//  Created by Christopher Helf on 15.11.16.
+//  Created by Christopher Helf on 05.12.16.
 //  Copyright © 2016 Christopher Helf. All rights reserved.
 //
 

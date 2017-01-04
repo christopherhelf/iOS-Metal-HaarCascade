@@ -173,6 +173,7 @@ class View : MTKView, ProcessorInputDelegate {
     }
     
     func updateFps() {
+        
         DispatchQueue.main.async {
             
             let time = CFAbsoluteTimeGetCurrent();
@@ -191,6 +192,7 @@ class View : MTKView, ProcessorInputDelegate {
             }
             
         }
+        
     }
     
 }

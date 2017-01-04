@@ -51,7 +51,9 @@ class ProcessorManager : ViewDelegate {
         processor.setDimensions(width: texture.width, height: texture.height)
         
         // process
-        processor.process(drawable: drawable, descriptor: descriptor, texture: texture, time: time, semaphore: _semaphore)
+        //DispatchQueue.global(qos: .background).async {
+            processor.process(drawable: drawable, descriptor: descriptor, texture: texture, time: time, semaphore: self._semaphore)
+        //}
         
 
     }
