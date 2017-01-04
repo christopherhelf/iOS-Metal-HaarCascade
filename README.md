@@ -1,4 +1,4 @@
-# iOS-Metal-Haarcascade
+# iOS-Metal-Haarcascade (DEPRECATED)
 
 This is a small example I've put together to demonstrate object detection via Haar Classifiers on iOS using the Metal API. It's not really optimized - I'm using a single kernel at the moment for the detection, which should probably be split up into multiple stages in order to avoid that single GPU threads run for too long, especially those that pass the first few cascades. The project is heavily based on a [Cuda-based example](https://github.com/Hoops021/FaceDetectionGPU), so make sure to check that out as well. 
 
