@@ -1,3 +1,7 @@
+# Remarks
+
+Please note that I haven't worked on this project in quite a while - I will try pushing fixes at some point but for now the code does not run as is in Xcode 9 / iOS 11. Modifications should not be too difficult, refer to the issues for problems that were solved already and feel free to open a PR anytime!
+
 # iOS-Metal-Haarcascade - Updated
 
 This is a small example I've put together to demonstrate object detection via Haar Classifiers on iOS using the Metal API. This is the updated version, for the old version please check out the respective branch. I've tried to optimize a lot of steps since the last version.
